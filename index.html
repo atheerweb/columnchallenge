@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -34,42 +33,43 @@
       }
       .attribution {
         font-size: 11px;
-        text-align: center;
+      }
+      .attribution p {
+        color: black;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
       .container {
+        width:100%;
         display: flex;
-        width: 1440px;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
-        border-radius: 100px;
+        overflow:hidden  ;
       }
       .sedans__container {
         background-color: hsl(31, 77%, 52%);
         padding: 50px;
-        width: 295px;
+        width: 90%;
         height: 485px;
-        border-top-left-radius:10px;
-        border-bottom-left-radius:10px;
-
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top: 200px;
       }
       .SUVs__container {
         background-color: hsl(184, 100%, 22%);
         padding: 50px;
-        width: 295px;
+        width: 90%;
         height: 485px;
       }
       .Luxury__container {
         background-color: hsl(179, 100%, 13%);
         padding: 50px;
-        width: 295px;
+        width: 90%;
         height: 485px;
-        border-top-right-radius:10px;
-        border-bottom-right-radius:10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
       }
       #sedans_b {
         color: hsl(31, 77%, 52%);
@@ -84,7 +84,7 @@
         color: hsla(0, 0%, 100%, 0.75);
         font-size: 14px;
         font-family: "Lexend Deca", sans-serif;
-        line-height: 1.8;
+        line-height: 2;
       }
       h1 {
         color: hsl(0, 0%, 95%);
@@ -96,18 +96,67 @@
       }
       button {
         border: none;
-        padding: 15px 30px;
+        padding: 16px 38px;
+        border-radius: 30px;
+        font-family: "Lexend Deca", sans-serif;
+        text-transform: capitalize;
+        margin-top: 13px;
+        font-weight: 600;
+      }
+      @media  (min-width: 960px){
+    .container {
+      display: flex;
+      width:auto;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .sedans__container {
+      background-color: hsl(31, 77%, 52%);
+      padding: 50px;
+      width: 295px;
+      height: 485px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-top-right-radius: 0;
+      margin-top: 0;
+    }
+    .SUVs__container {
+      background-color: hsl(184, 100%, 22%);
+      padding: 50px;
+      width: 295px;
+      height: 485px;
+    }
+    .Luxury__container {
+      background-color: hsl(179, 100%, 13%);
+      padding: 50px;
+      width: 295px;
+      height: 485px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 10px;
+    }
+    p {
+        color: hsla(0, 0%, 100%, 0.75);
+        font-size: 14px;
+        font-family: "Lexend Deca", sans-serif;
+        line-height: 1.8;
+      }
+      button {
+        border: none;
+        padding: 15px 32px;
         border-radius: 30px;
         font-family: "Lexend Deca", sans-serif;
         text-transform: capitalize;
         margin-top: 56px;
         font-weight: 600;
       }
+  }
     </style>
   </head>
   <body>
     <div class="container">
-      
       <div class="sedans__container">
         <img src="images/icon-sedans.svg" alt="" />
         <h1> Sedans </h1>
@@ -137,11 +186,6 @@
       </div>
     </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+  
   </body>
 </html>
